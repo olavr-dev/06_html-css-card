@@ -18,10 +18,19 @@
 /* <--********** Set Defaults ************--> */
 /* <----------------------------------------> */
 
+html {
+  --color-white: rgb(255, 255, 255);
+  --color-grey-light: rgb(235, 235, 235);
+  --color-grey-medium: rgb(166, 166, 166);
+  --color-grey-dark: rgb(90, 90, 90);
+  --color-grey-very-dark: rgb(50, 50, 50);
+  --color-blue-highlight: rgb(131, 227, 251);
+}
+
 body {
-  background-color: rgb(218, 218, 218);
+  background-color: var(--color-grey-light);
   font-family: 'Montserrat', sans-serif;
-  color: rgb(25, 25, 25);
+  color: rgb(50, 50, 50);
   transition: all 300ms ease;
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
@@ -34,13 +43,13 @@ body {
 /* <----------------------------------------> */
 
 .card {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-white);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   width: 26.5625rem;
   margin: 10rem auto;
-  box-shadow: 2px 2px 12px rgb(166, 166, 166);
+  box-shadow: 2px 2px 12px var(--color-grey-medium);
 }
 
 .heading h1 {
@@ -54,11 +63,11 @@ body {
   padding: 1rem 4rem 2.5rem 4rem;
   font-size: 1.1rem;
   font-weight: 500;
-  color: rgb(125, 125, 125);
+  color: var(--color-grey-dark);
 }
 
 .deal h2 {
-  background-color: rgb(131, 227, 251);
+  background-color: var(--color-blue-highlight);
   text-align: center;
   font-size: 4rem;
   font-weight: 700;
@@ -71,7 +80,7 @@ body {
   font-size: 1.1rem;
   font-weight: 500;
   text-align: center;
-  color: rgb(125, 125, 125);
+  color: var(--color-grey-dark);
 }
 
 .list ul {
@@ -88,13 +97,13 @@ body {
   align-items: center;
   font-size: 1.1rem;
   font-weight: 500;
-  color: rgb(90, 90, 90);
+  color: var(--color-grey-dark);
 }
 
 .list li i {
   font-size: 0.6rem;
   margin-right: 0.5rem;
-  color: rgb(90, 90, 90);
+  color: var(--color-grey-dark);
 }
 
 .button {
@@ -109,15 +118,16 @@ body {
 }
 
 button {
-  border: 2px solid rgb(211, 211, 211);
-  background-color: rgb(255, 255, 255);
+  border: 2px solid var(--color-grey-medium);
+  background-color: var(--color-white);
   padding: 1rem 0;
   width: 100%;
   cursor: pointer;
   text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
-  color: rgb(36, 191, 230);
+  color: var(--color-blue-highlight);
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -126,6 +136,6 @@ button {
 }
 
 button:hover {
-  color: rgb(255, 255, 255);
-  background-color: rgb(36, 191, 230);
+  color: var(--color-white);
+  background-color: var(--color-blue-highlight);
 }
